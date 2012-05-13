@@ -54,6 +54,10 @@ public class PlayerInteractEvent extends PlayerEvent implements Cancellable {
 		return heldItem;
 	}
 
+	public Block getBlock() {
+		return interactedPoint.getWorld().getBlock(e.getInteractedPoint());
+	}
+
 	public Point getInteractedPoint() {
 		return interactedPoint;
 	}
